@@ -4,12 +4,13 @@
     color: #aaa;
     top: 0px;
     left: 0px;
-    position: absolute;
+    position: relative;
   }
   
   canvas {
     z-index: 1;
-    top: -95px;
+    top: 50%;
+    transform: translate(0, -10%);
     position: absolute;
   }
  
