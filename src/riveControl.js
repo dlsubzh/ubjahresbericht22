@@ -23,7 +23,7 @@ const libraryCanvas = new rive.Rive({
           popupContent.style.visibility = "visible";
           
         // Kontrollieren: Link-out andere Webseite öffnen
-        } else if (state.indexOf("Ladina_TextBlase_Hover") > -1) {
+        } else if (state.indexOf("Dummy_Trigger_LinkOut") > -1) {
           window.open("https://www.ub.uzh.ch/de.html", "_blank");
 
         //Kontrollieren: Solange der Mouse Pointer auf dem Canvas kommt, wird der Pointer-Form geändert
