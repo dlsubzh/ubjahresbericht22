@@ -2,28 +2,41 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
         <script src="https://cdn.jsdelivr.net/npm/@rive-app/canvas@latest/rive.js"></script>
-        <link href="./style.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="./src/vimeo/player.js"></script>
+        <link href="./style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
     <body>
         <!-- Für Loader -->
         <div class="lds-ellipsis" id="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         
+        
+
         <!-- Inhalt -->
         <main>
+            
             <canvas id="canvas"></canvas>
 
             <!-- Vimeo Popup -->
             <div id="popupContent" class="popup">
-                <span class='kreuz material-icons' onclick='hideVid();'>close</span>
-                <iframe title='vimeo-player' src='https://player.vimeo.com/video/783453912?h=b9260604e5' \
-                width='640' height='360' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <span class="kreuz material-icons" id="closeBtn" onclick="hideVid();">close</span>
+                <iframe id="video" title="vimeo-player" src="https://player.vimeo.com/video/783453912?h=b9260604e5" \
+                width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
+
+            <!-- BGM "Seishi shita uchu" created & played by Music Atelier Amacha; iframe for autoplay in Chrome & Safari -->
+                <audio id="bgm" loop>
+                    <source src="./assets/sound/seishishitauchu.mp3" type="audio/mp3">
+                </audio>
+                <!-- <input type="button" id="mixBut" value="Start" /> -->
+                <span class="material-symbols-outlined" id="mixBut" onclick="Start();" value="Start">play_circle</span>
         </main>
         <script src="./src/style.js"></script>
         <script src="./src/riveControl.js"></script>
         <script src="./src/loader.js"></script>
+        <script src="./src/audioControll.js"></script>
     </body>
 </html>

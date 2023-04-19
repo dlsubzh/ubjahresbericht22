@@ -8,8 +8,11 @@ function end_loader() {
   }
   
   window.addEventListener("load", function () {
+    
     setTimeout(function () {
       end_loader();
+      const mixBut = document.getElementById("mixBut");
+      mixBut.style.visibility = "visible";
     }, 3000);
   });
   

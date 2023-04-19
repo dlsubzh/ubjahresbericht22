@@ -18,12 +18,22 @@ const libraryCanvas = new rive.Rive({
         // Kontrollieren: Link-out für Vimeo
         if (state.indexOf("Ruedi_Video_LinkOut") > -1) {
 
+          // Stop BGM
+          const mixBut = document.getElementById("mixBut");
+          const bgm = document.getElementById("bgm");
+          Stop();
+
           const elemId = "popupContent";
           const popupContent = document.getElementById(elemId);
           popupContent.style.visibility = "visible";
           
         // Kontrollieren: Link-out andere Webseite öffnen
         } else if (state.indexOf("Kurier_LinkOut") > -1) {
+          // Stop BGM
+          const mixBut = document.getElementById("mixBut");
+          const bgm = document.getElementById("bgm");
+          Stop();
+
           window.open("https://www.uzh.ch/blog/ub/2023/04/12/einer-fuer-alle-der-ub-zb-kurier/", "_blank");
 
         //Kontrollieren: Solange der Mouse Pointer auf dem Canvas kommt, wird der Pointer-Form geändert
@@ -36,7 +46,9 @@ const libraryCanvas = new rive.Rive({
 
 
   function hideVid() {
-
+    const player = new Vimeo.Player("video");
+    player.pause();
+ 
     const popupContent = document.getElementById("popupContent");
     popupContent.style.visibility = "hidden";
 
