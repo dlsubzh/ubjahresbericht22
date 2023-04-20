@@ -8,7 +8,7 @@ function Start(){
     mixBut.removeEventListener("click", Start);
     mixBut.addEventListener("click", Stop);
     mixBut.value = "Stop";
-    mixBut.innerHTML = "pause"
+    mixBut.innerHTML = "volume_off"
 }
 
 function Stop(){
@@ -16,7 +16,7 @@ function Stop(){
     mixBut.removeEventListener("click", Stop);
     mixBut.addEventListener("click", Start);
     mixBut.value = "Start";
-    mixBut.innerHTML = "play_circle"
+    mixBut.innerHTML = "volume_up"
 }
 
 

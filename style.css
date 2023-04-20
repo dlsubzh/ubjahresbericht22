@@ -19,7 +19,7 @@
     object-fit: cover;
     width: 100vw;
     height:100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   iframe {
@@ -56,6 +56,9 @@
 
 #mixBut {
   visibility: hidden;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 }
 
 .material-symbols-outlined {
