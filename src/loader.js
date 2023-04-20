@@ -11,8 +11,11 @@ function end_loader() {
     
     setTimeout(function () {
       end_loader();
-      const mixBut = document.getElementById("mixBut");
-      mixBut.style.visibility = "visible";
+      const mixBtn = document.getElementById("mixBtn");
+      mixBtn.style.visibility = "visible";
+      const showCopyrightBtn = document.getElementById("showCopyrightBtn");
+      showCopyrightBtn.style.visibility = "visible";
+  
     }, 3000);
   });
   

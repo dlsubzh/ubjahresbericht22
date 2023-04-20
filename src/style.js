@@ -15,4 +15,23 @@ canvas.style.height = String(width * 1.3) + "px";
 canvas.style.left = String(adjust) + "px";
 canvas.style.top = "0px";
 
+////////////////////
+// popup controll //
+////////////////////
 
+function hidePopup(elemId) {
+
+    if (elemId == "videoContent"){
+        const player = new Vimeo.Player("video");
+        player.pause();
+    }
+    
+    const popupContent = document.getElementById(elemId);
+    popupContent.style.visibility = "hidden";
+
+  }
+
+function showPopup(elemId){
+    const popupContent = document.getElementById(elemId);
+    popupContent.style.visibility = "visible";
+}

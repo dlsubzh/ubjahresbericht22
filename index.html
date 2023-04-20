@@ -21,19 +21,34 @@
             <canvas id="canvas"></canvas>
 
             <!-- Vimeo Popup -->
-            <div id="popupContent" class="popup">
-                <span class="kreuz material-icons" id="closeBtn" onclick="hideVid();">close</span>
+            <div id="videoContent" class="popup">
+                <span class="kreuz material-icons" id="closeBtn" onclick="hidePopup('videoContent');">close</span>
                 <iframe id="video" title="vimeo-player" src="https://player.vimeo.com/video/783453912?h=b9260604e5" \
                 width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
 
             <!-- BGM "Seishi shita uchu" created & played by Music Atelier Amacha; iframe for autoplay in Chrome & Safari -->
-                <audio id="bgm" loop>
-                    <source src="./assets/sound/seishishitauchu.mp3" type="audio/mp3">
-                </audio>
-                <!-- <input type="button" id="mixBut" value="Start" /> -->
-                <span class="material-symbols-outlined" id="mixBut" onclick="Start();" value="Start">volume_up</span>
+            <audio id="bgm" loop>
+                <source src="./assets/sound/seishishitauchu.mp3" type="audio/mp3">
+            </audio>
+            <span class="material-symbols-outlined" id="mixBtn" onclick="Start();" value="Start">volume_up</span>
+
+            <!-- Teinehmerliste Popup-->
+            <div id="participantslist" class="popup">
+                <span class="kreuz material-icons" id="closeBtn" onclick="hidePopup('participantslist');">close</span>
+                <div class="participants">
+                    <h1 class="listHeadline">Liste der Mittäter</h1>
+                    <ul class="list">
+                        <li>Josh</li>
+                        <li>Martin</li>
+                        <li>Ladina</li>
+                    </ul>
+                </div>
+            </div>
+            <span class="material-symbols-outlined" id="showCopyrightBtn" onclick="showPopup('participantslist');">copyright</span>
+
         </main>
+       
         <script src="./src/style.js"></script>
         <script src="./src/riveControl.js"></script>
         <script src="./src/loader.js"></script>

@@ -12,6 +12,20 @@
     position: absolute;
   }
 
+  
+  iframe {
+    width: 70%;
+    height:70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* ///////////////////////// */
+  /* ---- Popup Allgemein ---- */
+  /* ///////////////////////// */
+
   .popup {
     visibility: hidden;
     position: fixed;
@@ -22,16 +36,34 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  iframe {
-    width: 70%;
-    height:70%;
+  /* ///////////////////////// */
+  /* ---- Teilnehmerliste ---- */
+  /* ///////////////////////// */
+
+  .participants {
+    background: #222;
     position: absolute;
+    width: 70%;
+    height: 70%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  /* Popup close button */
+  .listHeadline {
+    color: white;
+  }
+
+  .list {
+    color: white;
+  }
+
+  /* ///////////////// */
+  /* ---- Buttons ---- */
+  /* ///////////////// */
+
+  /* ---- Popup Close Button ---- */
+
   .kreuz {
     color: white;
     display: block;
@@ -52,14 +84,27 @@
     cursor: pointer;
  }
 
- /* BGM button */
+ /* ---- BGM button ----  */
 
-#mixBut {
-  visibility: hidden;
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-}
+  #mixBtn {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0px;
+    right: 50px;
+ }
+
+/* ---- Show Copyright button ---- */
+
+  #showCopyrightBtn {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+ }
+
+/* /////////////// */
+/* ---- Icons ---- */
+/* /////////////// */
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -73,7 +118,10 @@
   cursor: pointer;
 }
 
-/* Loader */
+/* //////////////// */
+/* ---- Loader ---- */
+/* //////////////// */
+
 .lds-ellipsis {
   display: inline-block;
   position: fixed;

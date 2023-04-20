@@ -1,5 +1,5 @@
 
-const mixBut = document.getElementById("mixBut");
+const mixBut = document.getElementById("mixBtn");
 const bgm = document.getElementById("bgm");
 
 

@@ -23,7 +23,7 @@ const libraryCanvas = new rive.Rive({
           const bgm = document.getElementById("bgm");
           Stop();
 
-          const elemId = "popupContent";
+          const elemId = "videoContent";
           const popupContent = document.getElementById(elemId);
           popupContent.style.visibility = "visible";
           
@@ -45,11 +45,4 @@ const libraryCanvas = new rive.Rive({
     });
 
 
-  function hideVid() {
-    const player = new Vimeo.Player("video");
-    player.pause();
- 
-    const popupContent = document.getElementById("popupContent");
-    popupContent.style.visibility = "hidden";
-
-  }
+  
