@@ -1,6 +1,12 @@
 
 let buttonCanvasExample = document.getElementById("canvas");
 
+function linkOut(link){
+  // Stop BGM
+  Stop();
+  window.open(link, "_blank");
+}
+
 const libraryCanvas = new rive.Rive({
     src: "https://dlsubzh.github.io/ubjahresbericht22/assets/rive/ub_jahresbericht_final.riv",
     canvas: document.getElementById("canvas"),
@@ -19,8 +25,6 @@ const libraryCanvas = new rive.Rive({
         if (state.indexOf("Ruedi_Video_LinkOut") > -1) {
 
           // Stop BGM
-          const mixBut = document.getElementById("mixBut");
-          const bgm = document.getElementById("bgm");
           Stop();
 
           const elemId = "videoContent";
@@ -29,12 +33,56 @@ const libraryCanvas = new rive.Rive({
           
         // Kontrollieren: Link-out andere Webseite öffnen
         } else if (state.indexOf("Kurier_LinkOut") > -1) {
-          // Stop BGM
-          const mixBut = document.getElementById("mixBut");
-          const bgm = document.getElementById("bgm");
-          Stop();
 
-          window.open("https://www.uzh.ch/blog/ub/2023/04/12/einer-fuer-alle-der-ub-zb-kurier/", "_blank");
+          linkOut("https://www.uzh.ch/blog/ub/2023/04/12/einer-fuer-alle-der-ub-zb-kurier/");
+          
+        } else if (state.indexOf("Jan_LinkOut") > -1) {
+
+          linkOut("https://www.ub.uzh.ch/de/ub-besuchen/veranstaltungen-ausstellungen/hs21-buecher_daten_raeume.html");
+
+        } else if (state.indexOf("Feb_LinkOut") > -1) {
+
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/ausstellung-zaehneputzen.html");
+
+        } else if (state.indexOf("Mar_LinkOut") > -1) {
+          
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/biblioweekend-2022.html");
+
+        } else if (state.indexOf("Apr_LinkOut") > -1) {
+
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/Wir-haben-einen-Blog.html");
+
+        } else if (state.indexOf("Mai_LinkOut") > -1) {
+          
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/Lunchworkshops-im-DLS.html");
+
+        } else if (state.indexOf("Jun_LinkOut") > -1) {
+          
+          linkOut("https://www.zde.uzh.ch/de.html");
+
+        } else if (state.indexOf("Jul_LinkOut") > -1) {
+          
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/Open-Science-Summer-School.html");
+
+        } else if (state.indexOf("Aug_LinkOut") > -1) {
+
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/forschungsapparate.html");
+
+        } else if (state.indexOf("Sep_LinkOut") > -1) {
+          
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/lars.html");
+
+        } else if (state.indexOf("Okt_LinkOut") > -1) {
+          
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/lars.html");
+
+        } else if (state.indexOf("Nov_LinkOut") > -1) {
+          
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/game-month.html");
+
+        } else if (state.indexOf("Dez_LinkOut") > -1) {
+          
+          linkOut("https://www.ub.uzh.ch/de/ueber-die-ub/news/game-month.html");
 
         //Kontrollieren: Solange der Mouse Pointer auf dem Canvas kommt, wird der Pointer-Form geändert
         } else {
