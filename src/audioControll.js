@@ -2,21 +2,36 @@
 const mixBut = document.getElementById("mixBtn");
 const bgm = document.getElementById("bgm");
 
+let isPlaying = false;
 
-function Start(){
-    bgm.play();
-    mixBut.removeEventListener("click", Start);
-    mixBut.addEventListener("click", Stop);
-    mixBut.value = "Stop";
-    mixBut.innerHTML = "volume_off"
-}
+bgm.onplaying = function(){
+    isPlaying = true;
+};
+
+
+bgm.onpause = function(){
+    isPlaying = false;
+};
+
 
 function Stop(){
-    bgm.pause();
-    mixBut.removeEventListener("click", Stop);
-    mixBut.addEventListener("click", Start);
-    mixBut.value = "Start";
-    mixBut.innerHTML = "volume_up"
+
+    if (!bgm.paused && isPlaying){
+        bgm.pause();
+        mixBut.value = "Start";
+        mixBut.innerHTML = "volume_up"
+    }
 }
 
-
+mixBut.onclick = () => {
+    console.log("clicked");
+    if (bgm.paused && !isPlaying){
+        mixBut.value = "Stop";
+        mixBut.innerHTML = "volume_off"
+        bgm.play();
+    } else if (!bgm.paused && isPlaying) {
+        bgm.pause();
+        mixBut.value = "Start";
+        mixBut.innerHTML = "volume_up"
+    }
+};
